@@ -10,27 +10,90 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
 		<Navigation />
-			<main>
-				<!-- jumbotron -->
+			<main class="mb-24">
+				<!-- Jumbotron Hero Section -->
 				<section class="relative flex justify-center">
+					<div class="absolute inset-0 bg-black bg-opacity-50 z-2"></div>
 					<img class="w-full h-[700px] object-cover" src="/src/assets/hero-test.jpg" alt="Image of Sunshine Landscaping Plus LLC Henry Diaz.">
+					<div class="absolute right-80 top-60 text-yellow-400 text-6xl z-20">Our Lawn, Our Pride <br /> Shine Brighter with Sunshine!</div>
+					<div class="custom-shape-divider-bottom-1737062390">
+						<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+							<path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+						</svg>
+					</div>
 				</section>
 				
-				<section class="flex flex-col justify-center items-center">
-					<h1>Services</h1>
-					<div class="flex relative justify-center items-center max-w-5xl w-full gap-80 mx-auto">
-						<div class="absolute left-0">
+				<!-- Service Cards -->
+				<section class="flex relative flex-col justify-center items-center bg-slate-50 shadow-2xl shadow-slate-700 p-10 rounded-lg top-[-150px] max-w-5xl w-full mx-auto">
+					<div class="flex relative justify-center items-center w-full gap-80 mx-auto ">
+						<div class="absolute left-0  flex flex-col items-center ml-16">
+							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M120-192v-72h207q-20-76-75-131t-132-75q17-5 35-7.5t37-2.5q120 0 204 84t84 204H120Zm432 0q0-38-8-75t-24-72q38-66 104.5-103.5T768-480q18 0 36 2.5t36 7.5q-77 20-132 75.5T633-264h207v72H552Zm-72-215q0-58 21-109.5t58.5-90.5q37.5-39 88-62.5T758-696q-51 32-89 78t-58 102q-41 20-73.5 47.5T480-407Zm-66-67q-13-11-23.5-18T371-504q0-4 .5-10t.5-12q0-66-21-128t-62-114q59 25 103 70t67 105q-17 28-28.5 58.5T414-474Z"/></svg>
 							Lawncare
 						</div>
-						<div>
+						<div class="flex flex-col items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M312-144q-29.7 0-50.85-21.15Q240-186.3 240-216v-480h-48v-72h192v-48h192v48h192v72h-48v479.57Q720-186 698.85-165T648-144H312Zm336-552H312v480h336v-480ZM384-288h72v-336h-72v336Zm120 0h72v-336h-72v336ZM312-696v480-480Z"/></svg>
 							Lot Clean Ups
 						</div>
-						<div class="absolute right-0">
+						<div class="absolute right-0 flex flex-col items-center mr-16">
+							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M552-96H408v-144H144l153-240h-57l240-384 240 384h-57l153 240H552v144ZM275-312h158-73 240-73 157-409Zm0 0h409L532-552h58L480-728 370-552h58L275-312Z"/></svg>
 							Tree Trimming
 						</div>
 					</div>
 				</section>
-				
+
+				<!-- About Section -->
+				<section class="flex justify-center items-center">
+					<div class="max-w-7xl flex justify-between items-center gap-40">
+						<div class="w-full max-w-[400px]">
+							<img src="/src/assets/about.jpg" class="w-full" alt="About Us">
+						</div>
+						<div class="max-w-lg">
+							<h2 class="text-4xl font-bold mb-4 pl-2 border-l-8 border-lime-400">How We Got Started</h2>
+							<p class="text-gray-700">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam sequi veritatis id a tempora at voluptatibus excepturi aperiam dolor suscipit, ratione optio impedit iste corrupti, tenetur minus ipsa ullam soluta.</p>
+							<p class="text-gray-700 mt-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam sequi veritatis id a tempora at voluptatibus excepturi aperiam dolor suscipit, ratione optio impedit iste corrupti, tenetur minus ipsa ullam soluta.</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- CTA Section -->
+				<section class="bg-green-300 w-full h-60 mt-24">
+					<div class="flex flex-col justify-center items-center h-full">
+						<h3 class="text-3xl font-bold mb-4">Transform Your Lawn Today!</h3>
+						<p class="text-lg mb-6">Let us bring life and beauty to your outdoor spaces. Contact us now for a free quote!</p>
+						<button class="bg-white text-green-700 font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-green-400 hover:text-white transition-all duration-300">Get a Free Quote</button>
+					</div>
+				</section>
+
+				<!-- Service Area Section -->
+				<section class="mt-24 flex justify-center items-center">
+					<div class="max-w-5xl flex justify-between w-full h-96">
+						<div class="max-w-lg">
+							<h2 class="text-4xl font-bold mb-4 pl-2 border-l-8 border-lime-400">Areas We Serve</h2>
+							<p>Sunshine Landscaping Plus LLC Serves the majority of the <bold>Tampa Bay Area</bold> including:</p>
+							<br/>
+							<h3 class="text-3xl">Locations:</h3>
+							<br />
+							<ul class="flex flex-col gap-y-1 font-semibold">
+								<li>Lutz</li>
+								<li>Wesley Chapel</li>
+								<li>West Chase</li>
+								<li>South Tampa</li>
+								<li>Oldsmar</li>
+							</ul>
+						</div>
+					  	<iframe
+							class="max-w-[456px] w-full h-full border-0"
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d213356.33870452505!2d-82.83178661254499!3d27.968056820723116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2b70b022e8d7d%3A0x5b9d1f4c8eeb8850!2sTampa%20Bay%2C%20Florida!5e0!3m2!1sen!2sus!4v1682125123083!5m2!1sen!2sus&z=8"
+							allowfullscreen=""
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+					  	></iframe>
+
+					</div>
+				  </section>
+				  
+
+
 			</main>
 		<Footer />
 </Layout>
