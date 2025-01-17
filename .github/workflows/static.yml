@@ -47,11 +47,14 @@ jobs:
       - name: Build project
         run: npm run build
 
-      # Step 5: Upload the build output (dist folder) as an artifact
-      - name: Upload artifact
+      - name: Build Tailwind CSS
+        run: npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify
+
+      - name: Upload static files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # Specify the Astro output directory
+          path: ./dist # Include the `dist` directory
+
 
       # Step 6: Deploy the artifact to GitHub Pages
       - name: Deploy to GitHub Pages
