@@ -13,9 +13,15 @@ import Layout from '../layouts/Layout.astro';
 			<main>
 				<!-- Jumbotron Hero Section -->
 				<section class="relative flex justify-center">
-					<div class="absolute inset-0 bg-black bg-opacity-50 z-2"></div>
-					<img class="w-full h-[700px] object-cover" src="/src/assets/hero-test.jpg" alt="Image of Sunshine Landscaping Plus LLC Henry Diaz.">
-					<div class="absolute right-80 top-60 text-yellow-400 text-6xl z-20">Our Lawn, Our Pride <br /> Shine Brighter with Sunshine!</div>
+					<div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-60 z-2"></div>
+					<img class="w-full h-[700px] object-cover" src="src/assets/hero-test.jpg" alt="Image of Sunshine Landscaping Plus LLC Henry Diaz.">
+					<div class="absolute top-48 z-20 text-center text-white">
+						<h1 class="text-6xl font-bold mb-4">Your Lawn, Our Pride</h1>
+						<p class="text-2xl mb-8">Shine Brighter with Sunshine!</p>
+						<button class="bg-green-500 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-green-600 transition-all duration-300">
+							Get a Free Quote
+						</button>
+					</div>
 					<div class="custom-shape-divider-bottom-1737062390">
 						<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
 							<path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
@@ -24,43 +30,81 @@ import Layout from '../layouts/Layout.astro';
 				</section>
 				
 				<!-- Service Cards -->
-				<section class="flex relative flex-col justify-center items-center bg-slate-50 shadow-2xl shadow-slate-700 p-10 rounded-lg top-[-150px] max-w-5xl w-full mx-auto">
+				<!-- <section class="flex relative flex-col justify-center items-center bg-slate-50 shadow-2xl shadow-slate-700 p-10 rounded-lg top-[-150px] max-w-5xl w-full mx-auto">
 					<div class="flex relative justify-center items-center w-full gap-80 mx-auto ">
 						<div class="absolute left-0  flex flex-col items-center ml-16">
-							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M120-192v-72h207q-20-76-75-131t-132-75q17-5 35-7.5t37-2.5q120 0 204 84t84 204H120Zm432 0q0-38-8-75t-24-72q38-66 104.5-103.5T768-480q18 0 36 2.5t36 7.5q-77 20-132 75.5T633-264h207v72H552Zm-72-215q0-58 21-109.5t58.5-90.5q37.5-39 88-62.5T758-696q-51 32-89 78t-58 102q-41 20-73.5 47.5T480-407Zm-66-67q-13-11-23.5-18T371-504q0-4 .5-10t.5-12q0-66-21-128t-62-114q59 25 103 70t67 105q-17 28-28.5 58.5T414-474Z"/></svg>
+							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M120-192v-72h207q-20-76-75-131t-132-75q17-5 35-7.5t37-2.5q120 0 204 84t84 204H120Zm432 0q0-38-8-75t-24-72q38-66 104.5-103.5T768-480q18 0 36 2.5t36 7.5q-77 20-132 75.5T633-264h207v72H552Zm-72-215q0-58 21-109.5t58.5-90.5q37.5-39 88-62.5T758-696q-51 32-89 78t-58 102q-41 20-73.5 47.5T480-407Zm-66-67q-13-11-23.5-18T371-504q0-4 .5-10t.5-12q0-66-21-128t-62-114q59 25 103 70t67 105q-17 28-28.5 58.5T414-474Z"/>
+							</svg>
 							Lawncare
 						</div>
 						<div class="flex flex-col items-center">
-							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M312-144q-29.7 0-50.85-21.15Q240-186.3 240-216v-480h-48v-72h192v-48h192v48h192v72h-48v479.57Q720-186 698.85-165T648-144H312Zm336-552H312v480h336v-480ZM384-288h72v-336h-72v336Zm120 0h72v-336h-72v336ZM312-696v480-480Z"/></svg>
+							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M312-144q-29.7 0-50.85-21.15Q240-186.3 240-216v-480h-48v-72h192v-48h192v48h192v72h-48v479.57Q720-186 698.85-165T648-144H312Zm336-552H312v480h336v-480ZM384-288h72v-336h-72v336Zm120 0h72v-336h-72v336ZM312-696v480-480Z"/>
+							</svg>
 							Lot Clean Ups
 						</div>
 						<div class="absolute right-0 flex flex-col items-center mr-16">
-							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M552-96H408v-144H144l153-240h-57l240-384 240 384h-57l153 240H552v144ZM275-312h158-73 240-73 157-409Zm0 0h409L532-552h58L480-728 370-552h58L275-312Z"/></svg>
+							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M552-96H408v-144H144l153-240h-57l240-384 240 384h-57l153 240H552v144ZM275-312h158-73 240-73 157-409Zm0 0h409L532-552h58L480-728 370-552h58L275-312Z"/>
+							</svg>
 							Tree Trimming
 						</div>
 					</div>
-				</section>
-
+				</section> -->
+				
 				<!-- About Section -->
-				<section class="flex justify-center items-center">
-					<div class="max-w-7xl flex justify-between items-center gap-40">
+				<section class="flex justify-center items-center mt-12">
+					<div class="max-w-7xl flex justify-between items-center gap-20">
 						<div class="w-full max-w-[400px]">
-							<img src="/src/assets/about.jpg" class="w-full" alt="About Us">
+							<img src="src/assets/about.jpg" class="w-full" alt="About Us">
 						</div>
 						<div class="max-w-lg">
 							<h2 class="text-4xl font-bold mb-4 pl-2 border-l-8 border-lime-400">How We Got Started</h2>
-							<p class="text-gray-700">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam sequi veritatis id a tempora at voluptatibus excepturi aperiam dolor suscipit, ratione optio impedit iste corrupti, tenetur minus ipsa ullam soluta.</p>
-							<p class="text-gray-700 mt-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam sequi veritatis id a tempora at voluptatibus excepturi aperiam dolor suscipit, ratione optio impedit iste corrupti, tenetur minus ipsa ullam soluta.</p>
+							<p class="text-gray-700">
+								Sunshine Landscaping Plus LLC is a family-run business proudly serving Tampa Bay since 2008. We treat every customer like family, providing the best lawn care solutions to meet your unique needs.
+							</p>
+							<ul class="list-disc list-inside mt-4 text-gray-700">
+								<li>15+ years of experience.</li>
+								<li>Custom lawn care, tree trimming, and lot clean-ups.</li>
+								<li>Dedicated to reliability and excellence.</li>
+							</ul>
+							<a href="/about" class="block mt-6 text-green-700 font-semibold hover:underline">Learn more about our journey and values.</a>
 						</div>
 					</div>
 				</section>
+				
 
-				<!-- CTA Section -->
-				<section class="bg-green-300 w-full h-60 mt-24">
-					<div class="flex flex-col justify-center items-center h-full">
-						<h3 class="text-3xl font-bold mb-4">Transform Your Lawn Today!</h3>
-						<p class="text-lg mb-6">Let us bring life and beauty to your outdoor spaces. Contact us now for a free quote!</p>
-						<button class="bg-white text-green-700 font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-green-400 hover:text-white transition-all duration-300">Get a Free Quote</button>
+				<!-- Why Choose Us Section -->
+				<section class="flex flex-col justify-center items-center bg-slate-200 py-12 mt-12">
+					<h2 class="text-4xl font-bold mb-6">Why Choose Sunshine Landscaping?</h2>
+					<ul class="list-disc list-inside text-gray-700 max-w-5xl text-lg font-medium ml-32">
+						<li>Family-run business with over 15 years of experience.</li>
+						<li>Customizable lawn care solutions tailored to your needs.</li>
+						<li>Reliable, on-time service with a focus on customer satisfaction.</li>
+						<li>Servicing the majority of Tampa Bay, including Lutz, Wesley Chapel, and South Tampa.</li>
+					</ul>
+				</section>
+				
+				<!-- Services Section -->
+				<section class="py-12">
+					<h2 class="text-4xl font-bold text-center mb-8">Our Services</h2>
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+						<div class="flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg hover:-translate-y-2 transition-all">
+							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M120-192v-72h207q-20-76-75-131t-132-75q17-5 35-7.5t37-2.5q120 0 204 84t84 204H120Zm432 0q0-38-8-75t-24-72q38-66 104.5-103.5T768-480q18 0 36 2.5t36 7.5q-77 20-132 75.5T633-264h207v72H552Zm-72-215q0-58 21-109.5t58.5-90.5q37.5-39 88-62.5T758-696q-51 32-89 78t-58 102q-41 20-73.5 47.5T480-407Zm-66-67q-13-11-23.5-18T371-504q0-4 .5-10t.5-12q0-66-21-128t-62-114q59 25 103 70t67 105q-17 28-28.5 58.5T414-474Z"/>
+							</svg>
+							<h3 class="text-lg font-bold">Lawn Care</h3>
+							<p class="text-gray-600 text-center leading-relaxed">Custom mowing schedules tailored to your preferences.</p>
+						</div>
+						<div class="flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg hover:-translate-y-2 transition-all">
+							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M552-96H408v-144H144l153-240h-57l240-384 240 384h-57l153 240H552v144ZM275-312h158-73 240-73 157-409Zm0 0h409L532-552h58L480-728 370-552h58L275-312Z"/>
+							</svg>
+							<h3 class="text-lg font-bold">Tree Trimming</h3>
+							<p class="text-gray-600 text-center leading-relaxed">Keep your trees healthy and prevent safety hazards.</p>
+						</div>
+						<div class="flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg hover:-translate-y-2 transition-all">
+							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M312-144q-29.7 0-50.85-21.15Q240-186.3 240-216v-480h-48v-72h192v-48h192v48h192v72h-48v479.57Q720-186 698.85-165T648-144H312Zm336-552H312v480h336v-480ZM384-288h72v-336h-72v336Zm120 0h72v-336h-72v336ZM312-696v480-480Z"/>
+							</svg>
+							<h3 class="text-lg font-bold">Lot Clean-Ups</h3>
+							<p class="text-gray-600 text-center leading-relaxed">Remove debris and restore your property to its best condition.</p>
+						</div>
 					</div>
 				</section>
 
@@ -91,15 +135,40 @@ import Layout from '../layouts/Layout.astro';
 
 					</div>
 				  </section>
-				  
-				  <!-- CTA Section -->
-				<section class="bg-green-300 w-full h-80 mt-24">
-					<div class="flex flex-col justify-center items-center h-full">
-						<h3 class="text-3xl font-bold mb-4">Transform Your Lawn Today!</h3>
-						<p class="text-lg mb-6">Let us bring life and beauty to your outdoor spaces. Contact us now for a free quote!</p>
-						<button class="bg-white text-green-700 font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-green-400 hover:text-white transition-all duration-300">Get a Free Quote</button>
+
+				  <!-- Testimonial Section -->
+				  <section class="py-12 bg-slate-100 mt-12 shadow-lg">
+					<h2 class="text-4xl font-bold text-center mb-8">What Our Customers Say</h2>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+						<div class="bg-white p-6 rounded-lg shadow-md">
+							<p class="italic">"Sunshine Landscaping transformed my yard into a beautiful oasis!"</p>
+							<p class="mt-4 font-bold">– Sarah W.</p>
+						</div>
+						<div class="bg-white p-6 rounded-lg shadow-md">
+							<p class="italic">"Amazing service! My lawn has never looked better."</p>
+							<p class="mt-4 font-bold">– Mike D.</p>
+						</div>
+						<div class="bg-white p-6 rounded-lg shadow-md">
+							<p class="italic">"Highly recommend Sunshine Landscaping for any lawn care needs."</p>
+							<p class="mt-4 font-bold">– Karen L.</p>
+						</div>
 					</div>
 				</section>
+				  
+				  <!-- CTA Section -->
+				  <section class="bg-gradient-to-b from-green-300 to-green-800 w-full py-12 mt-12">
+					<div class="flex flex-col justify-center items-center text-center">
+						<h3 class="text-3xl font-bold mb-6">Transform Your Lawn Today!</h3>
+						<p class="text-lg mb-6 max-w-3xl">
+							Let us bring life and beauty to your outdoor spaces. Whether it's lawn care, tree trimming, or lot clean-ups, we've got you covered.
+						</p>
+						<blockquote class="italic mb-6">
+							"Sunshine Landscaping transformed my yard into a beautiful oasis. Highly recommend their services!" – Happy Customer
+						</blockquote>
+						<button class="bg-white text-green-700 font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-green-400 hover:text-white transition-all duration-300">Get a Free Quote</button>
+					</div>
+				</section>
+				
 
 
 			</main>
