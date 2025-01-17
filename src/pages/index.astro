@@ -13,9 +13,15 @@ import Layout from '../layouts/Layout.astro';
 			<main>
 				<!-- Jumbotron Hero Section -->
 				<section class="relative flex justify-center">
-					<div class="absolute inset-0 bg-black bg-opacity-50 z-2"></div>
+					<div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-60 z-2"></div>
 					<img class="w-full h-[700px] object-cover" src="/src/assets/hero-test.jpg" alt="Image of Sunshine Landscaping Plus LLC Henry Diaz.">
-					<div class="absolute right-80 top-60 text-yellow-400 text-6xl z-20">Our Lawn, Our Pride <br /> Shine Brighter with Sunshine!</div>
+					<div class="absolute top-48 z-20 text-center text-white">
+						<h1 class="text-6xl font-bold mb-4">Your Lawn, Our Pride</h1>
+						<p class="text-2xl mb-8">Shine Brighter with Sunshine!</p>
+						<button class="bg-green-500 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-green-600 transition-all duration-300">
+							Get a Free Quote
+						</button>
+					</div>
 					<div class="custom-shape-divider-bottom-1737062390">
 						<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
 							<path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
@@ -76,28 +82,28 @@ import Layout from '../layouts/Layout.astro';
 						<li>Servicing the majority of Tampa Bay, including Lutz, Wesley Chapel, and South Tampa.</li>
 					</ul>
 				</section>
-
+				
 				<!-- Services Section -->
 				<section class="py-12">
 					<h2 class="text-4xl font-bold text-center mb-8">Our Services</h2>
 					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-						<div class="flex flex-col items-center">
+						<div class="flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg hover:-translate-y-2 transition-all">
 							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M120-192v-72h207q-20-76-75-131t-132-75q17-5 35-7.5t37-2.5q120 0 204 84t84 204H120Zm432 0q0-38-8-75t-24-72q38-66 104.5-103.5T768-480q18 0 36 2.5t36 7.5q-77 20-132 75.5T633-264h207v72H552Zm-72-215q0-58 21-109.5t58.5-90.5q37.5-39 88-62.5T758-696q-51 32-89 78t-58 102q-41 20-73.5 47.5T480-407Zm-66-67q-13-11-23.5-18T371-504q0-4 .5-10t.5-12q0-66-21-128t-62-114q59 25 103 70t67 105q-17 28-28.5 58.5T414-474Z"/>
 							</svg>
 							<h3 class="text-lg font-bold">Lawn Care</h3>
-							<p class="text-gray-600 text-center">Custom mowing schedules tailored to your preferences.</p>
+							<p class="text-gray-600 text-center leading-relaxed">Custom mowing schedules tailored to your preferences.</p>
 						</div>
-						<div class="flex flex-col items-center">
-							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M312-144q-29.7 0-50.85-21.15Q240-186.3 240-216v-480h-48v-72h192v-48h192v48h192v72h-48v479.57Q720-186 698.85-165T648-144H312Zm336-552H312v480h336v-480ZM384-288h72v-336h-72v336Zm120 0h72v-336h-72v336ZM312-696v480-480Z"/>
-							</svg>
-							<h3 class="text-lg font-bold">Tree Trimming</h3>
-							<p class="text-gray-600 text-center">Keep your trees healthy and prevent safety hazards.</p>
-						</div>
-						<div class="flex flex-col items-center">
+						<div class="flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg hover:-translate-y-2 transition-all">
 							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M552-96H408v-144H144l153-240h-57l240-384 240 384h-57l153 240H552v144ZM275-312h158-73 240-73 157-409Zm0 0h409L532-552h58L480-728 370-552h58L275-312Z"/>
 							</svg>
+							<h3 class="text-lg font-bold">Tree Trimming</h3>
+							<p class="text-gray-600 text-center leading-relaxed">Keep your trees healthy and prevent safety hazards.</p>
+						</div>
+						<div class="flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg hover:-translate-y-2 transition-all">
+							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M312-144q-29.7 0-50.85-21.15Q240-186.3 240-216v-480h-48v-72h192v-48h192v48h192v72h-48v479.57Q720-186 698.85-165T648-144H312Zm336-552H312v480h336v-480ZM384-288h72v-336h-72v336Zm120 0h72v-336h-72v336ZM312-696v480-480Z"/>
+							</svg>
 							<h3 class="text-lg font-bold">Lot Clean-Ups</h3>
-							<p class="text-gray-600 text-center">Remove debris and restore your property to its best condition.</p>
+							<p class="text-gray-600 text-center leading-relaxed">Remove debris and restore your property to its best condition.</p>
 						</div>
 					</div>
 				</section>
