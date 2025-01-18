@@ -62,7 +62,7 @@ import Layout from '../layouts/Layout.astro';
 							<img src="assets/about.jpg" class="w-full" alt="About Us">
 						</div>
 						<div class="max-w-lg">
-							<h2 class="text-4xl font-bold mb-4 pl-2 border-l-8 border-lime-400">How We Got Started</h2>
+							<h2 class="text-4xl font-bold mb-4 pl-2 border-l-8 border-green-600">How We Got Started</h2>
 							<p class="text-gray-700">
 								Sunshine Landscaping Plus LLC is a family-run business proudly serving Tampa Bay since 2008. We treat every customer like family, providing the best lawn care solutions to meet your unique needs.
 							</p>
@@ -71,7 +71,7 @@ import Layout from '../layouts/Layout.astro';
 								<li>Custom lawn care, tree trimming, and lot clean-ups.</li>
 								<li>Dedicated to reliability and excellence.</li>
 							</ul>
-							<a href="/about" class="block mt-6 text-green-700 font-semibold hover:underline">Learn more about our journey and values.</a>
+							<a href="/about" class="max-w-72 flex items-center py-2 px-6 justify-center mt-6 text-white font-semibold hover:bg-green-800 bg-green-700 rounded-lg duration-100 ease-in-out transition-all">Learn more about our journey and values.</a>
 						</div>
 					</div>
 				</section>
@@ -110,18 +110,21 @@ import Layout from '../layouts/Layout.astro';
 							</svg>
 							<h3 class="text-lg font-bold">Lawn Care</h3>
 							<p class="text-gray-600 text-center leading-relaxed">Custom mowing schedules tailored to your preferences.</p>
+							<a href="#" class="text-green-600 mt-4 hover:underline">Learn More</a>
 						</div>
 						<div class="flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg hover:-translate-y-2 transition-all">
 							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M552-96H408v-144H144l153-240h-57l240-384 240 384h-57l153 240H552v144ZM275-312h158-73 240-73 157-409Zm0 0h409L532-552h58L480-728 370-552h58L275-312Z"/>
 							</svg>
 							<h3 class="text-lg font-bold">Tree Trimming</h3>
 							<p class="text-gray-600 text-center leading-relaxed">Keep your trees healthy and prevent safety hazards.</p>
+							<a href="#" class="text-green-600 mt-4 hover:underline">Learn More</a>
 						</div>
 						<div class="flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg hover:-translate-y-2 transition-all">
 							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M312-144q-29.7 0-50.85-21.15Q240-186.3 240-216v-480h-48v-72h192v-48h192v48h192v72h-48v479.57Q720-186 698.85-165T648-144H312Zm336-552H312v480h336v-480ZM384-288h72v-336h-72v336Zm120 0h72v-336h-72v336ZM312-696v480-480Z"/>
 							</svg>
 							<h3 class="text-lg font-bold">Lot Clean-Ups</h3>
 							<p class="text-gray-600 text-center leading-relaxed">Remove debris and restore your property to its best condition.</p>
+							<a href="#" class="text-green-600 mt-4 hover:underline">Learn More</a>
 						</div>
 					</div>
 				</section>
@@ -130,7 +133,7 @@ import Layout from '../layouts/Layout.astro';
 				<section class="mt-12 flex justify-center items-center">
 					<div class="max-w-5xl flex justify-between w-full h-96">
 						<div class="max-w-lg">
-							<h2 class="text-4xl font-bold mb-4 pl-2 border-l-8 border-lime-400">Areas We Serve</h2>
+							<h2 class="text-4xl font-bold mb-4 pl-2 border-l-8 border-green-600">Areas We Serve</h2>
 							<p class="ml-4">Sunshine Landscaping Plus LLC Serves the majority of the <bold>Tampa Bay Area</bold> including:</p>
 							<br/>
 							<h3 class="text-3xl ml-4">Locations:</h3>
@@ -154,8 +157,27 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 				  </section>
 
+				  <!-- Stats section -->
+				  <section class="py-12 mt-12 bg-green-100">
+					<h2 class="text-4xl font-bold text-center mb-8">Our Achievements</h2>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+						<div>
+							<h3 class="text-5xl font-bold text-green-600">125+</h3>
+							<p>Satisfied Clients</p>
+						</div>
+						<div>
+							<h3 class="text-5xl font-bold text-green-600">3+</h3>
+							<p>Expert Team Members</p>
+						</div>
+						<div>
+							<h3 class="text-5xl font-bold text-green-600">85+</h3>
+							<p>Permanent Clients</p>
+						</div>
+					</div>
+				</section>
+
 				  <!-- Testimonial Section -->
-				  <section class="py-12 bg-slate-100 mt-12 shadow-lg">
+				  <section class="py-12 shadow-lg">
 					<h2 class="text-4xl font-bold text-center mb-8">What Our Customers Say</h2>
 					<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
 						<div class="bg-white p-6 rounded-lg shadow-md">
