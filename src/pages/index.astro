@@ -17,42 +17,47 @@ import Layout from '../layouts/Layout.astro';
 					<img class="w-full h-[700px] object-cover" src="assets/hero-test.jpg" alt="Image of Sunshine Landscaping Plus LLC Henry Diaz.">
 					<div class="absolute top-48 z-20 text-center text-white">
 						<h1 class="text-6xl font-bold mb-4">Your Lawn, Our Pride</h1>
-						<p class="text-2xl mb-8">Shine Brighter with Sunshine!</p>
-						<button class="bg-green-500 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-green-600 transition-all duration-300">
-							Get a Free Quote
-						</button>
+						<p class="text-2xl mb-3">Shine Brighter with Sunshine!</p>
+						<p class="text-1xl mb-8">Professional Landscaping and Lawn Care Services Tailored to You.</p>
+						<div class="flex gap-x-10 justify-center">
+							<button class="bg-green-500 text-white py-4 px-8 rounded-lg shadow-lg hover:bg-green-700 transition-all duration-300">
+								Get a Free Quote
+							</button>
+							<button class="bg-white text-green-500 py-4 px-8 rounded-lg shadow-lg hover:bg-yellow-500 hover:text-white transition-all duration-300">
+								See our services
+							</button>
+						</div>
 					</div>
-					<div class="custom-shape-divider-bottom-1737062390">
-						<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-							<path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
-						</svg>
-					</div>
+					
 				</section>
 				
 				<!-- Service Cards -->
-				<!-- <section class="flex relative flex-col justify-center items-center bg-slate-50 shadow-2xl shadow-slate-700 p-10 rounded-lg top-[-150px] max-w-5xl w-full mx-auto">
-					<div class="flex relative justify-center items-center w-full gap-80 mx-auto ">
-						<div class="absolute left-0  flex flex-col items-center ml-16">
-							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M120-192v-72h207q-20-76-75-131t-132-75q17-5 35-7.5t37-2.5q120 0 204 84t84 204H120Zm432 0q0-38-8-75t-24-72q38-66 104.5-103.5T768-480q18 0 36 2.5t36 7.5q-77 20-132 75.5T633-264h207v72H552Zm-72-215q0-58 21-109.5t58.5-90.5q37.5-39 88-62.5T758-696q-51 32-89 78t-58 102q-41 20-73.5 47.5T480-407Zm-66-67q-13-11-23.5-18T371-504q0-4 .5-10t.5-12q0-66-21-128t-62-114q59 25 103 70t67 105q-17 28-28.5 58.5T414-474Z"/>
-							</svg>
-							Lawncare
+				<section class="py-12 bg-slate-100">
+					<div class="max-w-6xl flex justify-between mx-auto">
+						<div class="md:w-1/2 p-6">
+							<h2 class="text-3xl font-bold mb-4 text-green-700">Dedicated to Your Lawn's Success</h2>
+							<p class="text-gray-700 leading-relaxed mb-4">
+								Sunshine Landscaping Plus LLC is not just a business—it's my passion. As the sole owner and operator, I take pride in delivering personalized, high-quality service to every client. When you hire Sunshine Landscaping, you’re not just another customer; you’re a valued part of my community.
+							</p>
+							<p class="text-gray-700 leading-relaxed mb-4">
+								With over 15 years of experience, I’ve built my reputation on reliability, attention to detail, and ensuring every yard I touch shines brighter.
+							</p>
+							<ul class="list-disc list-inside text-gray-700">
+								<li>One-on-one, personalized service.</li>
+								<li>A trusted expert with 15+ years of experience.</li>
+								<li>Passionate about transforming outdoor spaces.</li>
+							</ul>
 						</div>
-						<div class="flex flex-col items-center">
-							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M312-144q-29.7 0-50.85-21.15Q240-186.3 240-216v-480h-48v-72h192v-48h192v48h192v72h-48v479.57Q720-186 698.85-165T648-144H312Zm336-552H312v480h336v-480ZM384-288h72v-336h-72v336Zm120 0h72v-336h-72v336ZM312-696v480-480Z"/>
-							</svg>
-							Lot Clean Ups
-						</div>
-						<div class="absolute right-0 flex flex-col items-center mr-16">
-							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M552-96H408v-144H144l153-240h-57l240-384 240 384h-57l153 240H552v144ZM275-312h158-73 240-73 157-409Zm0 0h409L532-552h58L480-728 370-552h58L275-312Z"/>
-							</svg>
-							Tree Trimming
+						<div class="my-auto w-full max-w-[400px]">
+							<img src="assets/about.jpg" class="w-full" alt="About Us">
 						</div>
 					</div>
-				</section> -->
+				</section>
+				
 				
 				<!-- About Section -->
-				<section class="flex justify-center items-center mt-12">
-					<div class="max-w-7xl flex justify-between items-center gap-20">
+				<section class="mt-12 mb-20">
+					<div class="mx-auto max-w-5xl flex justify-between items-center gap-20">
 						<div class="w-full max-w-[400px]">
 							<img src="assets/about.jpg" class="w-full" alt="About Us">
 						</div>
@@ -109,7 +114,7 @@ import Layout from '../layouts/Layout.astro';
 				</section>
 
 				<!-- Service Area Section -->
-				<section class="mt-24 flex justify-center items-center">
+				<section class="mt-12 flex justify-center items-center">
 					<div class="max-w-5xl flex justify-between w-full h-96">
 						<div class="max-w-lg">
 							<h2 class="text-4xl font-bold mb-4 pl-2 border-l-8 border-lime-400">Areas We Serve</h2>
@@ -156,7 +161,7 @@ import Layout from '../layouts/Layout.astro';
 				</section>
 				  
 				  <!-- CTA Section -->
-				  <section class="bg-gradient-to-b from-green-300 to-green-800 w-full py-12 mt-12">
+				  <section class="bg-gradient-to-b from-green-300 to-green-800 w-full py-12">
 					<div class="flex flex-col justify-center items-center text-center">
 						<h3 class="text-3xl font-bold mb-6">Transform Your Lawn Today!</h3>
 						<p class="text-lg mb-6 max-w-3xl">
