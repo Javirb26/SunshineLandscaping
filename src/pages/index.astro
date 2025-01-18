@@ -80,13 +80,26 @@ import Layout from '../layouts/Layout.astro';
 				<!-- Why Choose Us Section -->
 				<section class="flex flex-col justify-center items-center bg-slate-200 py-12 mt-12">
 					<h2 class="text-4xl font-bold mb-6">Why Choose Sunshine Landscaping?</h2>
-					<ul class="list-disc list-inside text-gray-700 max-w-5xl text-lg font-medium ml-32">
-						<li>Family-run business with over 15 years of experience.</li>
-						<li>Customizable lawn care solutions tailored to your needs.</li>
-						<li>Reliable, on-time service with a focus on customer satisfaction.</li>
-						<li>Servicing the majority of Tampa Bay, including Lutz, Wesley Chapel, and South Tampa.</li>
-					</ul>
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl">
+						<div class="flex flex-col items-center">
+							<svg class="h-12 w-12 mb-4 fill-green-600"><!-- Icon --></svg>
+							<p class="text-center text-gray-700">15+ years of experience.</p>
+						</div>
+						<div class="flex flex-col items-center">
+							<svg class="h-12 w-12 mb-4 fill-green-600"><!-- Icon --></svg>
+							<p class="text-center text-gray-700">Customizable lawn care solutions.</p>
+						</div>
+						<div class="flex flex-col items-center">
+							<svg class="h-12 w-12 mb-4 fill-green-600"><!-- Icon --></svg>
+							<p class="text-center text-gray-700">Reliable and on-time service.</p>
+						</div>
+						<div class="flex flex-col items-center">
+							<svg class="h-12 w-12 mb-4 fill-green-600"><!-- Icon --></svg>
+							<p class="text-center text-gray-700">Serving Tampa Bay and beyond.</p>
+						</div>
+					</div>
 				</section>
+				
 				
 				<!-- Services Section -->
 				<section class="py-12">
