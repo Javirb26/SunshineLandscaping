@@ -32,9 +32,9 @@ import Layout from '../layouts/Layout.astro';
 				</section>
 				
 				<!-- Service Cards -->
-				<section class="py-12 bg-white">
-					<div class="max-w-6xl flex justify-between mx-auto">
-						<div class="md:w-1/2 p-6">
+				<section class="py-12 mx-8 bg-white">
+					<div class="max-w-6xl flex flex-col lg:flex-row items-center justify-between mx-auto gap-5">
+						<div class="max-w-xl lg:w-1/2 py-6">
 							<h2 class="text-3xl font-bold mb-4 text-green-700">Dedicated to Your Lawn's Success</h2>
 							<p class="text-gray-700 leading-relaxed mb-4">
 								Sunshine Landscaping Plus LLC is not just a business—it's my passion. As the sole owner and operator, I take pride in delivering personalized, high-quality service to every client. When you hire Sunshine Landscaping, you’re not just another customer; you’re a valued part of my community.
@@ -48,31 +48,31 @@ import Layout from '../layouts/Layout.astro';
 								<li>Passionate about transforming outdoor spaces.</li>
 							</ul>
 						</div>
-						<div class="my-auto w-full max-w-[400px]">
-							<img src="assets/about.jpg" class="w-full" alt="About Us">
+						<div class="my-auto">
+							<img class="w-full max-w-[600px] lg:max-w-[500px]" src="assets/about.jpg" class="w-full" alt="About Us">
 						</div>
 					</div>
 				</section>
 
 				<!-- Services Section -->
-				<section class="py-12 bg-green-100">
+				<section class="py-12 bg-green-100 px-12">
 					<h2 class="text-4xl font-bold text-center mb-8 ">Our Services</h2>
-					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-						<div class="flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg hover:-translate-y-2 transition-all">
+					<div class="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto">
+						<div class="max-w-[400px] flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg hover:-translate-y-2 transition-all">
 							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M120-192v-72h207q-20-76-75-131t-132-75q17-5 35-7.5t37-2.5q120 0 204 84t84 204H120Zm432 0q0-38-8-75t-24-72q38-66 104.5-103.5T768-480q18 0 36 2.5t36 7.5q-77 20-132 75.5T633-264h207v72H552Zm-72-215q0-58 21-109.5t58.5-90.5q37.5-39 88-62.5T758-696q-51 32-89 78t-58 102q-41 20-73.5 47.5T480-407Zm-66-67q-13-11-23.5-18T371-504q0-4 .5-10t.5-12q0-66-21-128t-62-114q59 25 103 70t67 105q-17 28-28.5 58.5T414-474Z"/>
 							</svg>
 							<h3 class="text-lg font-bold">Lawn Care</h3>
 							<p class="text-gray-600 text-center leading-relaxed">Custom mowing schedules tailored to your preferences.</p>
 							<a href="#" class="text-green-600 mt-4 hover:underline">Learn More</a>
 						</div>
-						<div class="flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg hover:-translate-y-2 transition-all">
+						<div class="max-w-[400px] flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg hover:-translate-y-2 transition-all">
 							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M552-96H408v-144H144l153-240h-57l240-384 240 384h-57l153 240H552v144ZM275-312h158-73 240-73 157-409Zm0 0h409L532-552h58L480-728 370-552h58L275-312Z"/>
 							</svg>
 							<h3 class="text-lg font-bold">Tree Trimming</h3>
 							<p class="text-gray-600 text-center leading-relaxed">Keep your trees healthy and prevent safety hazards.</p>
 							<a href="#" class="text-green-600 mt-4 hover:underline">Learn More</a>
 						</div>
-						<div class="flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg hover:-translate-y-2 transition-all">
+						<div class="max-w-[400px] flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg hover:-translate-y-2 transition-all">
 							<svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" class="fill-green-600 mb-2"><path d="M312-144q-29.7 0-50.85-21.15Q240-186.3 240-216v-480h-48v-72h192v-48h192v48h192v72h-48v479.57Q720-186 698.85-165T648-144H312Zm336-552H312v480h336v-480ZM384-288h72v-336h-72v336Zm120 0h72v-336h-72v336ZM312-696v480-480Z"/>
 							</svg>
 							<h3 class="text-lg font-bold">Lot Clean-Ups</h3>
@@ -84,17 +84,17 @@ import Layout from '../layouts/Layout.astro';
 				
 				
 				<!-- About Section -->
-				<section class="py-20">
-					<div class="mx-auto max-w-5xl flex justify-between items-center gap-20">
-						<div class="w-full max-w-[400px]">
+				<section class="py-20 mx-10">
+					<div class="mx-auto max-w-5xl flex flex-col lg:flex-row justify-between items-center gap-20">
+						<div class="w-full max-w-[600px] lg:max-w-[400px]">
 							<img src="assets/about.jpg" class="w-full" alt="About Us">
 						</div>
 						<div class="max-w-lg">
 							<h2 class="text-4xl font-bold mb-4 pl-2 border-l-8 border-green-600">How We Got Started</h2>
-							<p class="text-gray-700">
+							<p class="text-lg text-gray-700">
 								Sunshine Landscaping Plus LLC is a family-run business proudly serving Tampa Bay since 2008. We treat every customer like family, providing the best lawn care solutions to meet your unique needs.
 							</p>
-							<ul class="list-disc list-inside mt-4 text-gray-700">
+							<ul class="list-disc mt-4 ml-5 text-gray-700 text-lg">
 								<li>15+ years of experience.</li>
 								<li>Custom lawn care, tree trimming, and lot clean-ups.</li>
 								<li>Dedicated to reliability and excellence.</li>
@@ -107,7 +107,7 @@ import Layout from '../layouts/Layout.astro';
 
 				<!-- Why Choose Us Section -->
 				<section class="flex flex-col justify-center items-center py-20 bg-slate-100">
-					<h2 class="text-4xl font-bold mb-6">Why Choose Sunshine Landscaping?</h2>
+					<h2 class="flex text-4xl font-bold mb-6 text-center">Why Choose Sunshine Landscaping?</h2>
 					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl">
 						<div class="flex flex-col items-center mt-4">
 							<svg class="fill-green-600 hover:fill-yellow-600 hover:scale-125 h-12 w-12 transition-all duration-300" width="48" height="48" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -136,21 +136,25 @@ import Layout from '../layouts/Layout.astro';
 				</section>
 				
 				<!-- Service Area Section -->
-				<section class="mt-12 flex justify-center items-center">
-					<div class="max-w-5xl flex justify-between w-full h-96">
-						<div class="max-w-lg">
-							<h2 class="text-4xl font-bold mb-4 pl-2 border-l-8 border-green-600">Areas We Serve</h2>
-							<p class="ml-4">Sunshine Landscaping Plus LLC Serves the majority of the <bold>Tampa Bay Area</bold> including:</p>
-							<br/>
-							<h3 class="text-3xl ml-4">Locations:</h3>
-							<br />
-							<ul class="flex flex-col gap-y-1 font-semibold">
-								<li class="ml-4">Lutz</li>
-								<li class="ml-4">Wesley Chapel</li>
-								<li class="ml-4">West Chase</li>
-								<li class="ml-4">South Tampa</li>
-								<li class="ml-4">Oldsmar</li>
-							</ul>
+				<section class="mt-12 mx-8 flex justify-center items-center">
+					<div class="max-w-5xl flex flex-col md:flex-row items-center justify-between w-full h-96">
+						<div class="max-w-lg mb-4 md:inline md:mr-10">
+							<div class="flex flex-col">
+								<h2 class="text-4xl font-bold mb-2 md:mb-4 pl-2 border-l-8 border-green-600">Areas We Serve</h2>
+								<p class="ml-4">Sunshine Landscaping Plus LLC Serves the majority of the <bold>Tampa Bay Area</bold> including:</p>
+								<br class="hidden md:inline" />
+							</div>
+							<div class="flex mt-2 md:flex-col">
+								<h3 class="hidden md:inline text-3xl ml-4">Locations:</h3>
+								<br class="hidden md:inline" />
+								<ul class="flex flex-wrap gap-x-4 md:flex-col md:gap-y-1 font-semibold ml-4">
+									<li class="">Lutz</li>
+									<li class="">Wesley Chapel</li>
+									<li class="">West Chase</li>
+									<li class="">South Tampa</li>
+									<li class="">Oldsmar</li>
+								</ul>
+							</div>
 						</div>
 					  	<iframe
 							class="max-w-[456px] w-full h-full border-0"
@@ -166,7 +170,7 @@ import Layout from '../layouts/Layout.astro';
 				  <!-- Stats section -->
 				  <section class="py-12 mt-12 bg-slate-100">
 					<h2 class="text-4xl font-bold text-center mb-8">Our Achievements</h2>
-					<div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center max-w-7xl mx-auto">
+					<div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center max-w-7xl mx-auto">
 						<div>
 							<h3 class="text-5xl font-bold text-green-600">125+</h3>
 							<p>Satisfied Clients</p>
@@ -183,7 +187,7 @@ import Layout from '../layouts/Layout.astro';
 				</section>
 
 				  <!-- Testimonial Section -->
-				  <section class="py-12 shadow-lg">
+				  <section class="py-12 shadow-lg px-8">
 					<h2 class="text-4xl font-bold text-center mb-8">What Our Customers Say</h2>
 					<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
 						<div class="bg-white p-6 rounded-lg shadow-md">
@@ -202,7 +206,7 @@ import Layout from '../layouts/Layout.astro';
 				</section>
 				  
 				  <!-- CTA Section -->
-				  <section class="bg-green-100 w-full py-12">
+				  <section class="bg-green-100 w-full py-12 px-8">
 					<div class="flex flex-col justify-center items-center text-center">
 						<h3 class="text-3xl font-bold mb-6">Transform Your Lawn Today!</h3>
 						<p class="text-lg mb-6 max-w-3xl">
