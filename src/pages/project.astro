@@ -1,11 +1,36 @@
 ---
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-import Layout from '../layouts/Layout.astro';
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import Projects from "../components/Projects.astro";
+import Banner from "../components/Banner.astro";
 ---
 
 <Layout>
-    <Navigation />
-    
-    <Footer />
+  <Navigation />
+    <Banner 
+      breadCrumb="Projects"
+      pageTitle="Explore our work"
+      description="Take a look at some of the recent landscaping projects we've completed in the Tampa Bay Area"
+      src="../assets/banner-img.jpeg"
+      alt="alt"
+    />
+    <main class="">
+      <!-- Container for project images -->
+      <div class="flex flex-wrap justify-center gap-x-28 max-w-[1440px] mx-auto">
+
+        <Projects 
+          src="../assets/hero-test.jpg"
+          alt="description of image"
+          caption="Image of project 1"
+        />
+        <Projects
+          src="../assets/before-tree.png"
+          alt="description of image"
+          caption="Image of project 1"
+        />
+
+      </div>
+    </main>
+  <Footer />
 </Layout>

@@ -1,5 +1,4 @@
 ---
-
 const { pathname } = Astro.url;
 
 const navLinks = [
@@ -7,40 +6,47 @@ const navLinks = [
   { name: "About", href: "/about" },
   { name: "Projects", href: "/project" },
   { name: "Contact Us", href: "/contact" },
-]
-
+];
 ---
 
-
 <nav class="sticky top-0 inset-0 w-full bg-white shadow-md z-50 py-10 md:py-7">
-    
-    <div class="flex relative items-center justify-between w-full lg:max-w-7xl mx-auto lg:px-6">
+  <div
+    class="flex relative items-center justify-between w-full lg:max-w-7xl mx-auto lg:px-6"
+  >
+    <div class="absolute left-5">
+      <img class="max-w-48 lg:max-w-52" src="assets/logo.jpeg" alt="logo" />
+    </div>
 
-
-        <div class="absolute left-5">
-            <img class="max-w-48 lg:max-w-52" src="assets/logo.jpeg" alt="logo">
-        </div>
-        
-
-        <ul class="mx-auto flex-grow md:flex justify-center items-center hidden md:gap-6 lg:gap-10">
-          {navLinks.map((link) => (
-            <li class={pathname === link.href ? "font-bold" : ""}>
-              <a class="cursor-pointer hover:text-green-600 transition-all duration-300" href={link.href}>{link.name}</a>
-            </li>
-          ))}
-        </ul>
-        <!-- Centered navigation links -->
-        <!-- <div class="mx-auto flex-grow md:flex justify-center items-center hidden md:gap-6 lg:gap-10">
+    <ul
+      class="mx-auto flex-grow md:flex justify-center items-center hidden md:gap-6 lg:gap-10"
+    >
+      {
+        navLinks.map((link) => (
+          <li class={pathname === link.href ? "font-bold" : ""}>
+            <a
+              class="cursor-pointer hover:text-green-600 transition-all duration-300"
+              href={link.href}
+            >
+              {link.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- Centered navigation links -->
+    <!-- <div class="mx-auto flex-grow md:flex justify-center items-center hidden md:gap-6 lg:gap-10">
           <a class="font-bold cursor-pointer hover:text-green-600 transition-all duration-300">Home</a>
           <a class="cursor-pointer hover:text-green-600 transition-all duration-300">About</a>
           <a href="/projects" class="cursor-pointer hover:text-green-600 transition-all duration-300">Projects</a>
           <a href="/contact" class="cursor-pointer hover:text-green-600 transition-all duration-300">Contact Us</a>
         </div> -->
 
-        <button class="absolute right-8 py-1.5 px-2 lg:py-2 lg:px-5 rounded-lg bg-green-600">
-            <span class="font-bold md:text-sm lg:text-md text-white">Call: (123) 456-7890</span>
-        </button>
-        
-    </div>
-
+    <button
+      class="absolute right-8 py-1.5 px-2 lg:py-2 lg:px-5 rounded-lg bg-green-600"
+    >
+      <span class="font-bold md:text-sm lg:text-md text-white"
+        >Call: (123) 456-7890</span
+      >
+    </button>
+  </div>
 </nav>
