@@ -1,0 +1,24 @@
+---
+
+export interface Props {
+    src: string;
+    alt: string;
+    caption: string;
+    blurb: string
+}
+
+const {src, alt, caption, blurb } = Astro.props
+---
+
+    <div class="w-[400px] h-full flex flex-col justify-center my-4">
+
+      <div>
+        <img class="w-full h-[150px] object-cover hover:cursor-pointer" src={src} alt={alt}>
+      </div>
+
+
+      <p class="text-xl pt-3 font-semibold">{caption}</p>
+      <p class="font-light text-gray-400 text-sm">{blurb}</p>
+
+    </div>
+

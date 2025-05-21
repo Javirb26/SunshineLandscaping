@@ -1,0 +1,46 @@
+---
+export interface Props {
+  breadCrumb: string;
+  pageTitle: string;
+  description: string;
+  src: string;
+  alt: string;
+}
+
+const { breadCrumb, pageTitle, description, src, alt } = Astro.props;
+---
+
+<div class="relative flex justify-center h-[300px]">
+  {
+    src && alt ? (
+      <img
+          class="w-full h-[300px] object-cover"
+          src={src}
+          alt={alt}
+        />
+        <div class="absolute top-0 right-1/2 mx-auto pt-12 px-10 justify-center flex flex-col text-white lg:max-w-7xl">
+          <div class="flex gap-x-2">
+            <a href="/" class="font-light underline">Home</a>
+            <span>/ {breadCrumb}</span>
+          </div>
+          <h1 class="text-5xl font-semi mt-5">{pageTitle}</h1>
+          <p class="text-lg max-w-[650px] mt-5">{description}</p>
+        </div>
+      
+      
+    ) : (
+      <div class="w-full h-[300px] bg-green-900" >
+        <div class="relative mx-auto pt-12 px-10 justify-center flex flex-col text-white lg:max-w-7xl">
+          <div class="flex gap-x-2">
+            <a href="/" class="font-light underline">Home</a>
+            <span>/ {breadCrumb}</span>
+          </div>
+          <h1 class="text-4xl font-semi mt-5">{pageTitle}</h1>
+          <p class="text-md max-w-[650px] mt-5">{description}</p>
+        </div>
+      </div>
+    )
+  }
+
+  
+</div>

@@ -1,0 +1,80 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import Banner from "../components/Banner.astro";
+---
+
+<Layout>
+  <Navigation />
+
+  <Banner
+    breadCrumb="Contact"
+    pageTitle="Get in Touch"
+    description="Have questions or need assistance? Our team is here to help. Fill out the form below, and we'll get back to you as soon as possible."
+    src=""
+    alt=""
+  />
+
+  <main>
+    <div class="mx-auto max-w-5xl py-10">
+      <form action="/" class="flex flex-col max-w-3xl gap-y-5">
+        <div class="flex gap-x-10">
+            <div class="w-full">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                placeholder="John Doe"
+                class="border rounded-md p-1.5 w-full"
+              />
+            </div>
+
+            <div class="w-full">
+              <label for="name">Select Service</label>
+              <select class="border rounded-md p-1.5 w-full" name="" id="">
+                <option value="">Lawncare</option>
+                <option value="">Property Clean-ups</option>
+                <option value="">Tree trimming</option>
+              </select>
+            </div>
+        </div>
+        <div class="flex gap-x-10">
+          <div class="w-full">
+            <label for="" class="">Email Address</label>
+            <input
+              class="border rounded-md p-1.5 w-full"
+              placeholder="johndoe2@gmail.com"
+              type="email"
+              name=""
+              id=""
+            />
+          </div>
+
+          <div class="w-full">
+            <label for="">Phone Number</label>
+            <input
+              class="border rounded-md p-1.5 w-full"
+              placeholder="813-123-4567"
+              pattern="^[0-9-+\s()]{6,16}"
+              type="tel"
+              name=""
+              id=""
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <label for="">Additional Information</label>
+          <textarea rows="5" cols="50" name="" id="" class="border rounded-md"
+          ></textarea>
+        </div>
+      </form>
+      <button
+        class="py-2 px-6 mt-5 bg-green-600 text-white rounded-full"
+        type="submit">Submit</button
+      >
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

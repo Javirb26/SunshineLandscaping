@@ -1,0 +1,78 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import Projects from "../components/Projects.astro";
+import Banner from "../components/Banner.astro";
+---
+
+<Layout>
+  <Navigation />
+    <Banner 
+      breadCrumb="Projects"
+      pageTitle="Explore our work"
+      description="Take a look at some of the recent landscaping projects we've completed in the Tampa Bay Area"
+      src="../assets/projects_banner.jpg"
+      alt="alt"
+    />
+    <main class="">
+      <!-- Container for project images -->
+      <div class="flex flex-wrap justify-center gap-x-10 max-w-[1440px] mx-auto mt-4 px-20">
+
+        <Projects
+          src="../assets/test-600px.jpeg"
+          alt="description of image"
+          caption="Image of project 1"
+          blurb="this is a test to see what we should and this was the test "
+        />
+        <Projects
+          src="../assets/test-600px.jpeg"
+          alt="description of image"
+          caption="Image of project 2"
+          blurb="this is a test to see what we should and this is a slightly longer test to view the height "
+        />
+        <Projects
+          src="../assets/test-600px.jpeg"
+          alt="description of image"
+          caption="Image of project 3"
+          blurb="this is a test to see what we should and yes"
+        />
+        <Projects
+          src="../assets/test-600px.jpeg"
+          alt="description of image"
+          caption="Image of project 1"
+          blurb="this is a test to see what we should and this was the test "
+        />
+        <Projects
+          src="../assets/test-600px.jpeg"
+          alt="description of image"
+          caption="Image of project 2"
+          blurb="this is a test to see what we should and this is a slightly longer test to view the height "
+        />
+        <Projects
+          src="../assets/test-600px.jpeg"
+          alt="description of image"
+          caption="Image of project 3"
+          blurb="this is a test to see what we should and yes"
+        /><Projects
+        src="../assets/test-600px.jpeg"
+        alt="description of image"
+        caption="Image of project 1"
+        blurb="this is a test to see what we should and this was the test "
+      />
+      <Projects
+        src="../assets/test-600px.jpeg"
+        alt="description of image"
+        caption="Image of project 2"
+        blurb="this is a test to see what we should and this is a slightly longer test to view the height "
+      />
+      <Projects
+        src="../assets/test-600px.jpeg"
+        alt="description of image"
+        caption="Image of project 3"
+        blurb="this is a test to see what we should and yes"
+      />
+      </div>
+    </main>
+  <Footer />
+</Layout>

@@ -5,6 +5,9 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['Poppins', 'sans-serif']
+			},
+			maxWidth: {
+				'8xl': '90rem' // 1440px
 			}
 		},
 	},
