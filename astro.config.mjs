@@ -7,5 +7,5 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  base: process.env.NODE_ENV === 'production' ? '/SunshineLandscaping/' : '/',
+  base: '/',
 });
