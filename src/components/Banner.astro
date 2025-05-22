@@ -1,13 +1,16 @@
 ---
+import { text } from 'stream/consumers';
+
 export interface Props {
   breadCrumb: string;
   pageTitle: string;
   description: string;
   src: string;
   alt: string;
+  textColor: string;
 }
 
-const { breadCrumb, pageTitle, description, src, alt } = Astro.props;
+const { breadCrumb, pageTitle, description, src, alt, textColor } = Astro.props;
 ---
 
 <div class="relative flex justify-center h-[300px]">
@@ -18,7 +21,7 @@ const { breadCrumb, pageTitle, description, src, alt } = Astro.props;
           src={src}
           alt={alt}
         />
-        <div class="absolute top-0 right-1/2 mx-auto pt-12 px-10 justify-center flex flex-col text-white lg:max-w-7xl">
+        <div class={`${textColor} absolute top-0 right-1/2 mx-auto pt-12 px-10 justify-center flex flex-col lg:max-w-7xl`}>
           <div class="flex gap-x-2">
             <a href="/" class="font-light underline">Home</a>
             <span>/ {breadCrumb}</span>
