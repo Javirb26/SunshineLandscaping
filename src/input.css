@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components { 
-    .custom-shape-divider-bottom-1737062390 {
+    .custom-shape-divider-bottom-1745167140 {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -13,7 +13,7 @@
         transform: rotate(180deg);
     }
     
-    .custom-shape-divider-bottom-1737062390 svg {
+    .custom-shape-divider-bottom-1745167140 svg {
         position: relative;
         display: block;
         width: calc(100% + 1.3px);
@@ -21,7 +21,7 @@
         transform: rotateY(180deg);
     }
     
-    .custom-shape-divider-bottom-1737062390 .shape-fill {
+    .custom-shape-divider-bottom-1745167140 .shape-fill {
         fill: #FFFFFF;
     }
 }
