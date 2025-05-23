@@ -8,8 +8,9 @@ export default {
 			},
 			maxWidth: {
 				'8xl': '90rem' // 1440px
-			}
+			},
 		},
+
 	},
 	plugins: [],
 }
