@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    [x-cloak] {
+    display: none !important;
+  }
+}
+
 @layer components { 
     .custom-shape-divider-bottom-1745167140 {
         position: absolute;

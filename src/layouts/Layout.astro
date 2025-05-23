@@ -12,10 +12,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/src/input.css" />
     <link rel="stylesheet" href="/dist/output.css" />
     <title>Sunshine Landscaping Plus LLC</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
-  <body class="h-screen">
+  <body class="h-screen" :class="open ? 'overflow-hidden' : ''">
     <slot />
   </body>
 </html>
