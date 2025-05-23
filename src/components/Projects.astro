@@ -2,23 +2,33 @@
 
 export interface Props {
     src: string;
+    hoverSrc: string;
     alt: string;
     caption: string;
     blurb: string
 }
 
-const {src, alt, caption, blurb } = Astro.props
+const {src, hoverSrc, alt, caption, blurb } = Astro.props
+
 ---
 
-    <div class="w-[400px] h-full flex flex-col justify-center my-4">
+    <div class="w-[400px] h-full flex flex-col justify-center m-4">
 
-      <div>
-        <img class="w-full h-[150px] object-cover hover:cursor-pointer" src={src} alt={alt}>
+      <div class="relative w-full h-[300px]">
+        <img 
+            class="w-full h-[300px] object-cover absolute top-0 left-0 transition-opacity duration-300" 
+            src={hoverSrc} 
+            alt={alt}
+          />
+        <img
+            class="w-full h-[300px] object-cover absolute top-0 left-0 opacity-0 hover:opacity-100 transition-opacity duration-300 hover:cursor-pointer"
+            src={src}
+            alt={alt}  
+          />
       </div>
 
-
-      <p class="text-xl pt-3 font-semibold">{caption}</p>
-      <p class="font-light text-gray-400 text-sm">{blurb}</p>
-
+      <p class="text-xl pt-3 font-semibold w-full">{caption}</p>
+      <p class="font-light text-gray-400 text-sm w-full">{blurb}</p>
+        
     </div>
 
