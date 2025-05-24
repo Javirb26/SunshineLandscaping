@@ -13,18 +13,40 @@ const {src, hoverSrc, alt, caption, blurb } = Astro.props
 ---
 
     <div class="w-[400px] h-full flex flex-col justify-center m-4">
-
-      <div class="relative w-full h-[300px]">
+      <!-- Mobile: Click to show -->
+      <div class="relative w-full h-[300px] block md:hidden" x-data="{ toggled: false }">
         <img 
             class="w-full h-[300px] object-cover absolute top-0 left-0 transition-opacity duration-300" 
+            :class="toggled ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto' "
+            @click="toggled = !toggled"
             src={hoverSrc} 
             alt={alt}
+            loading="lazy"
           />
         <img
-            class="w-full h-[300px] object-cover absolute top-0 left-0 opacity-0 hover:opacity-100 transition-opacity duration-300 hover:cursor-pointer"
+            class="w-full h-[300px] object-cover absolute top-0 left-0 transition-opacity duration-300 hover:cursor-pointer"
+            :class="toggled ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none' "
+            @click="toggled = !toggled"
             src={src}
-            alt={alt}  
+            alt={alt} 
+            loading="lazy" 
           />
+      </div>
+
+      <!-- Desktop: Hover to show -->
+      <div class="relative w-full h-[300px] hidden md:block group">
+        <img
+          class="w-full h-[300px] object-cover absolute top-0 left-0 transition-opacity duration-300"
+          src={src}
+          alt={alt}
+          loading="lazy"
+        />
+        <img
+          class="w-full h-[300px] object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+          src={hoverSrc}
+          alt={alt}
+          loading="lazy"
+        />
       </div>
 
       <p class="text-xl pt-3 font-semibold w-full">{caption}</p>
