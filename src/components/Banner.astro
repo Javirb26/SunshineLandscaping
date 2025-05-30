@@ -8,16 +8,17 @@ export interface Props {
   src: string;
   alt: string;
   textColor: string;
+  height?: string;
 }
 
-const { breadCrumb, pageTitle, description, src, alt, textColor } = Astro.props;
+const { breadCrumb, pageTitle, description, src, alt, textColor, height } = Astro.props;
 ---
 
 <div class="relative flex justify-center h-[300px]">
   {
     src && alt ? (
       <img
-          class="w-full h-[300px] object-cover"
+          class={`${height} w-full object-cover`}
           src={src}
           alt={alt}
         />
