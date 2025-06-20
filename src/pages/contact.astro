@@ -23,9 +23,12 @@ import Banner from "../components/Banner.astro";
             name="contact" 
             method="post" 
             data-netlify="true"
-            class="flex flex-col max-w-3xl gap-y-5"
+            class="flex flex-col max-w-3xl gap-y-5 m-6"
+            data-netlify-honeypot="bot-field"
+            action="/success"
           >
-          <div class="flex gap-x-10">
+          <input class="hidden" name="bot-field" >
+          <div class="flex flex-col lg:flex-row gap-y-4 lg:gap-y-0 gap-x-10">
               <div class="w-full">
                 <label for="name">Full Name</label>
                 <input
@@ -33,32 +36,35 @@ import Banner from "../components/Banner.astro";
                   placeholder="John Doe"
                   class="border rounded-md p-1.5 w-full"
                   id="name"
+                  name="name"
+                  required
                 />
               </div>
 
               <div class="w-full">
                 <label for="name">Select Service</label>
-                <select class="border rounded-md p-1.5 w-full" name="select" id="selectInput">
-                  <option value="lawncare">Lawncare</option>
-                  <option value="properyCleanUp">Property Clean-ups</option>
-                  <option value="treeTrimming">Tree trimming</option>
-                  <option value="treeCutting">Tree cutting/removal</option>
-                  <option value="irrigation">Irrigation</option>
+                <select class="border rounded-md p-1.5 w-full" name="Service-Selection" id="selectInput" required>
+                  <option value="Lawncare">Lawncare</option>
+                  <option value="Property-Clean-Up">Property Clean-ups</option>
+                  <option value="Tree-Trimming">Tree trimming</option>
+                  <option value="Tree-Cutting">Tree cutting/removal</option>
+                  <option value="Irrigation">Irrigation</option>
                   <option value="Mulching">Mulching</option>
-                  <option value="sodInstall">Sod Installation</option>
-                  <option value="other">Other</option>
+                  <option value="Sod-Installation">Sod Installation</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
           </div>
-          <div class="flex gap-x-10">
+          <div class="flex flex-col lg:flex-row gap-y-4 lg:gap-y-0 gap-x-10">
             <div class="w-full">
               <label for="email">Email Address</label>
               <input
                 class="border rounded-md p-1.5 w-full"
                 placeholder="johndoe2@gmail.com"
                 type="email"
-                name="email"
+                name="Client-Email"
                 id="inputEmail"
+                required
               />
             </div>
 
@@ -69,22 +75,24 @@ import Banner from "../components/Banner.astro";
                 placeholder="813-123-4567"
                 pattern="^[0-9-+\s()]{6,16}"
                 type="tel"
-                name="tel"
+                name="Client-Phone"
                 id="inputTel"
+                required
               />
             </div>
           </div>
 
           <div class="flex flex-col">
             <label for="">Additional Information</label>
-            <textarea rows="5" cols="50" name="" id="" class="border rounded-md"
+            <textarea rows="5" cols="50" maxlength="500" name="Work-Description" id="text-area" class="border rounded-md"
             ></textarea>
           </div>
+          <button
+            class="py-2 px-6 mt-5 max-w-32 bg-green-600 text-white rounded-full"
+            type="submit">Submit</button
+          >
         </form>
-        <button
-          class="py-2 px-6 mt-5 bg-green-600 text-white rounded-full"
-          type="submit">Submit</button
-        >
+        
       </div>
     </main>
 
