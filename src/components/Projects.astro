@@ -1,5 +1,4 @@
 ---
-
 export interface Props {
     src: string;
     hoverSrc: string;
@@ -8,10 +7,9 @@ export interface Props {
     blurb: string
 }
 
-const {src, hoverSrc, alt, caption, blurb } = Astro.props
-
+const {src, hoverSrc, alt, caption, blurb } = Astro.props;
 ---
-
+<>
     <div class="w-[400px] h-full flex flex-col justify-center m-4">
       <!-- Mobile: Click to show -->
       <div class="relative w-full h-[300px] block md:hidden" x-data="{ toggled: false }">
@@ -66,3 +64,4 @@ const {src, hoverSrc, alt, caption, blurb } = Astro.props
         
     </div>
 
+</>

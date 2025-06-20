@@ -1,6 +1,4 @@
 ---
-import { text } from 'stream/consumers';
-
 export interface Props {
   breadCrumb: string;
   pageTitle: string;
@@ -13,40 +11,39 @@ export interface Props {
 
 const { breadCrumb, pageTitle, description, src, alt, textColor, height } = Astro.props;
 ---
-
-<div class="relative flex justify-center h-[300px]">
-  {
-    src && alt ? (
-      <img
-          class={`${height} w-full object-cover`}
-          src={src}
-          alt={alt}
-        />
-        <div class={`absolute top-0 left-0 w-full h-full flex items-center pointer-events-none`}>
-          <div class={`${textColor} px-4 md:px-10 flex flex-col lg:max-w-7xl pointer-events-auto`}>
-            <div class="flex gap-x-2 mb-2">
+<>
+  <div class="relative flex justify-center h-[300px]">
+    {
+      src && alt ? (
+        <img
+            class={`${height} w-full object-cover`}
+            src={src}
+            alt={alt}
+          />
+          <div class={`absolute top-0 left-0 w-full h-full flex items-center pointer-events-none`}>
+            <div class={`${textColor} px-4 md:px-10 flex flex-col lg:max-w-7xl pointer-events-auto`}>
+              <div class="flex gap-x-2 mb-2">
+                <a href="/" class="font-light underline">Home</a>
+                <span>/ {breadCrumb}</span>
+              </div>
+              <h1 class="text-3xl md:text-5xl font-semibold mt-2">{pageTitle}</h1>
+              <p class="text-base md:text-lg max-w-[650px] mt-3">{description}</p>
+            </div>
+          </div>
+        
+        
+      ) : (
+        <div class="w-full h-[300px] bg-green-900" >
+          <div class="relative mx-auto pt-12 px-10 justify-center flex flex-col text-white lg:max-w-7xl">
+            <div class="flex gap-x-2">
               <a href="/" class="font-light underline">Home</a>
               <span>/ {breadCrumb}</span>
             </div>
-            <h1 class="text-3xl md:text-5xl font-semibold mt-2">{pageTitle}</h1>
-            <p class="text-base md:text-lg max-w-[650px] mt-3">{description}</p>
+            <h1 class="text-4xl font-semi mt-5">{pageTitle}</h1>
+            <p class="text-md max-w-[650px] mt-5">{description}</p>
           </div>
         </div>
-      
-      
-    ) : (
-      <div class="w-full h-[300px] bg-green-900" >
-        <div class="relative mx-auto pt-12 px-10 justify-center flex flex-col text-white lg:max-w-7xl">
-          <div class="flex gap-x-2">
-            <a href="/" class="font-light underline">Home</a>
-            <span>/ {breadCrumb}</span>
-          </div>
-          <h1 class="text-4xl font-semi mt-5">{pageTitle}</h1>
-          <p class="text-md max-w-[650px] mt-5">{description}</p>
-        </div>
-      </div>
-    )
-  }
-
-  
-</div>
+      )
+    }
+  </div>
+</>
