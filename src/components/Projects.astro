@@ -1,5 +1,4 @@
 ---
-
 export interface Props {
     src: string;
     hoverSrc: string;
@@ -8,35 +7,42 @@ export interface Props {
     blurb: string
 }
 
-const {src, hoverSrc, alt, caption, blurb } = Astro.props
-
+const {src, hoverSrc, alt, caption, blurb } = Astro.props;
 ---
-
+<>
     <div class="w-[400px] h-full flex flex-col justify-center m-4">
       <!-- Mobile: Click to show -->
       <div class="relative w-full h-[300px] block md:hidden" x-data="{ toggled: false }">
-        <img 
-            class="w-full h-[300px] object-cover absolute top-0 left-0 transition-opacity duration-300" 
-            :class="toggled ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto' "
-            @click="toggled = !toggled"
-            src={hoverSrc} 
-            alt={alt}
-            loading="lazy"
-          />
+        <!-- After -->
         <img
-            class="w-full h-[300px] object-cover absolute top-0 left-0 transition-opacity duration-300 hover:cursor-pointer"
-            :class="toggled ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none' "
+            class="cursor-pointer w-full h-[300px] object-cover absolute top-0 left-0 transition-opacity duration-300 hover:cursor-pointer"
+            :class="toggled ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto' "
             @click="toggled = !toggled"
             src={src}
             alt={alt} 
             loading="lazy" 
           />
+          <!-- Before -->
+        <img 
+            class="cursor-pointer w-full h-[300px] object-cover absolute top-0 left-0 transition-opacity duration-300" 
+            :class="toggled ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none' "
+            @click="toggled = !toggled"
+            src={hoverSrc} 
+            alt={alt}
+            loading="lazy"
+          />
+          <span 
+          @click="toggled = !toggled"
+          class="cursor-pointer absolute bottom-0 w-full flex items-center pl-4 py-2 text-lg font-semibold transition-opacity duration-300 bg-black/60 text-white">
+            
+            <p x-text="toggled? 'Tap to reveal After' : 'Tap to reveal Before' "></p>
+          </span>
       </div>
 
       <!-- Desktop: Hover to show -->
       <div class="relative w-full h-[300px] hidden md:block group">
         <img
-          class="w-full h-[300px] object-cover absolute top-0 left-0 transition-opacity duration-300"
+          class="cursor-pointer w-full h-[300px] object-cover absolute top-0 left-0 transition-opacity duration-300"
           src={src}
           alt={alt}
           loading="lazy"
@@ -47,6 +53,10 @@ const {src, hoverSrc, alt, caption, blurb } = Astro.props
           alt={alt}
           loading="lazy"
         />
+        <span 
+          class="cursor-pointer absolute bottom-0 w-full flex items-center pl-4 py-2 text-lg font-semibold transition-opacity duration-300 bg-black/60 text-white opacity-100 group-hover:opacity-0">
+            <p>Hover to reveal Before</p>
+          </span>
       </div>
 
       <p class="text-xl pt-3 font-semibold w-full">{caption}</p>
@@ -54,3 +64,4 @@ const {src, hoverSrc, alt, caption, blurb } = Astro.props
         
     </div>
 
+</>
