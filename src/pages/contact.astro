@@ -23,9 +23,12 @@ import Banner from "../components/Banner.astro";
             name="contact" 
             method="post" 
             data-netlify="true"
-            class="flex flex-col max-w-3xl gap-y-5"
+            class="flex flex-col max-w-3xl gap-y-5 m-6"
+            data-netlify-honeypot="bot-field"
+            action="/success"
           >
-          <div class="flex gap-x-10">
+          <input class="hidden" name="bot-field" >
+          <div class="flex flex-col lg:flex-row gap-y-4 lg:gap-y-0 gap-x-10">
               <div class="w-full">
                 <label for="name">Full Name</label>
                 <input
@@ -34,12 +37,13 @@ import Banner from "../components/Banner.astro";
                   class="border rounded-md p-1.5 w-full"
                   id="name"
                   name="name"
+                  required
                 />
               </div>
 
               <div class="w-full">
                 <label for="name">Select Service</label>
-                <select class="border rounded-md p-1.5 w-full" name="Service-Selection" id="selectInput">
+                <select class="border rounded-md p-1.5 w-full" name="Service-Selection" id="selectInput" required>
                   <option value="Lawncare">Lawncare</option>
                   <option value="Property-Clean-Up">Property Clean-ups</option>
                   <option value="Tree-Trimming">Tree trimming</option>
@@ -51,7 +55,7 @@ import Banner from "../components/Banner.astro";
                 </select>
               </div>
           </div>
-          <div class="flex gap-x-10">
+          <div class="flex flex-col lg:flex-row gap-y-4 lg:gap-y-0 gap-x-10">
             <div class="w-full">
               <label for="email">Email Address</label>
               <input
@@ -60,6 +64,7 @@ import Banner from "../components/Banner.astro";
                 type="email"
                 name="Client-Email"
                 id="inputEmail"
+                required
               />
             </div>
 
@@ -72,13 +77,14 @@ import Banner from "../components/Banner.astro";
                 type="tel"
                 name="Client-Phone"
                 id="inputTel"
+                required
               />
             </div>
           </div>
 
           <div class="flex flex-col">
             <label for="">Additional Information</label>
-            <textarea rows="5" cols="50" name="Work-Description" id="text-area" class="border rounded-md"
+            <textarea rows="5" cols="50" maxlength="500" name="Work-Description" id="text-area" class="border rounded-md"
             ></textarea>
           </div>
           <button
