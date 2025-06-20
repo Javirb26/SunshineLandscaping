@@ -20,7 +20,7 @@ const {src, hoverSrc, alt, caption, blurb } = Astro.props;
             @click="toggled = !toggled"
             src={src}
             alt={alt} 
-            loading="lazy" 
+            fetchpriority="high"
           />
           <!-- Before -->
         <img 
@@ -45,7 +45,7 @@ const {src, hoverSrc, alt, caption, blurb } = Astro.props;
           class="cursor-pointer w-full h-[300px] object-cover absolute top-0 left-0 transition-opacity duration-300"
           src={src}
           alt={alt}
-          loading="lazy"
+          fetchpriority="high"
         />
         <img
           class="w-full h-[300px] object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
