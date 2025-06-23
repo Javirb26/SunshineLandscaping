@@ -4,12 +4,13 @@ export interface Props {
   pageTitle: string;
   description: string;
   src: string;
+  srcset: string;
   alt: string;
   textColor: string;
   height?: string;
 }
 
-const { breadCrumb, pageTitle, description, src, alt, textColor, height } = Astro.props;
+const { breadCrumb, pageTitle, description, src, srcset, alt, textColor, height } = Astro.props;
 ---
 <>
   <div class="relative flex justify-center h-[300px]">
@@ -18,8 +19,10 @@ const { breadCrumb, pageTitle, description, src, alt, textColor, height } = Astr
         <img
             class={`${height} w-full object-cover`}
             src={src}
+            srcset={srcset}
             alt={alt}
             loading="eager"
+            fetchpriority="high"
           />
           <div class={`absolute top-0 left-0 w-full h-full flex items-center pointer-events-none`}>
             <div class={`${textColor} px-4 md:px-10 flex flex-col lg:max-w-7xl pointer-events-auto`}>
