@@ -4,10 +4,11 @@ export interface Props {
     hoverSrc: string;
     alt: string;
     caption: string;
-    blurb: string
+    blurb: string;
+    fetchpriority?: "high" | "low";
 }
 
-const {src, hoverSrc, alt, caption, blurb } = Astro.props;
+const {src, hoverSrc, alt, caption, blurb, fetchpriority } = Astro.props;
 ---
 <>
     <div class="w-[400px] h-full flex flex-col justify-center m-4">
@@ -45,7 +46,7 @@ const {src, hoverSrc, alt, caption, blurb } = Astro.props;
           class="cursor-pointer w-full h-[300px] object-cover absolute top-0 left-0 transition-opacity duration-300"
           src={src}
           alt={alt}
-          fetchpriority="high"
+          fetchpriority={fetchpriority}
         />
         <img
           class="w-full h-[300px] object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"

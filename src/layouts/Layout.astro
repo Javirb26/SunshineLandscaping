@@ -4,15 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon-logo.svg" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Preload and defer Font Awesome to prevent render blocking -->
+    <link 
+      rel="preload" 
+      as="style" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+      onload="this.onload=null;this.rel='stylesheet'" 
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      rel="stylesheet"
+    <noscript>
+      <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+      />
+    </noscript>
+      
+    <link 
+      rel="preload" 
+      as="image" 
+      href="https://res.cloudinary.com/dic4llr8p/image/upload/v1750696738/projectbanner_elaa1n_gcypxg.webp" 
+      type="image/webp" 
+      fetchpriority="high" 
     />
-    <link rel="stylesheet" href="/src/input.css" />
+    <link 
+      rel="preload" 
+      as="image" 
+      href="https://res.cloudinary.com/dic4llr8p/image/upload/v1750696737/beige-yard_ocs2xc.webp" 
+      type="image/webp" 
+      fetchpriority="high" 
+    />
+    <link 
+      rel="preload" 
+      as="image" 
+      href="https://res.cloudinary.com/dic4llr8p/image/upload/v1750696737/about-banner_t382gj.webp" 
+      type="image/webp" 
+      fetchpriority="high" 
+    />
+    <link 
+      rel="preload" 
+      as="image" 
+      href="https://res.cloudinary.com/dic4llr8p/image/upload/v1750696738/hero_jb9zg3.webp" 
+      type="image/webp" 
+      fetchpriority="high" 
+    />
+
     <link rel="stylesheet" href="/dist/output.css" />
     <title>Sunshine Landscaping Plus LLC</title>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
