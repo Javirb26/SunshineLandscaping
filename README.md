@@ -7,4 +7,10 @@
 * Alpine.js (for certain dynamic uses like featuring before and after images on hover with ease)
 * Tailwind (for styling)
 
-
+The Website currently contains 4 pages: 
+* <a href="https://sunshinelandscaping.netlify.app">Home</a>
+* <a href="https://sunshinelandscaping.netlify.app/about">About</a>
+* <a href="https://sunshinelandscaping.netlify.app/project">Projects</a>
+* <a href="https://sunshinelandscaping.netlify.app/contact">Contact Us</a>
+ 
+Our next goal is to add a 'services' section within our navigation to contain a dropdown of each service with their respective page.
